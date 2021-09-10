@@ -31,7 +31,7 @@ st.text('Series no gráfico:')
 
 st.sidebar.header('Opções da simulação')
 V = 1
-pct_entrada = st.sidebar.slider('Entrada (%)', 0, 100) / 100
+pct_entrada = st.sidebar.slider('Entrada (%)', 0, 100, 20) / 100
 c_a = st.sidebar.slider('Custo proporcional (%) do aluguel', .0, 1., .5) / 100
 t_j = st.sidebar.slider('Taxa de juros (%) do emprestimo', 0., 50., 7.8) / 100
 n = 12 * st.sidebar.slider('Anos do emprestimo', 1, 30, 20)
