@@ -6,6 +6,14 @@ from renting_or_buying import SAC, Aluguel, Financiamento
 
 st.title('Comprar ou alugar?')
 st.caption('Isso não é aconselhamento financeiro!')
+st.markdown('É melhor comprar ou alugar um imóvel. A simulação a seguir busca responder essa pergunta considerando um conjunto de variaveis, '
+  'como taxa de juros, valorização do imóvel, tempo de financiamento, etc.\n\n'
+  'É importante notar que, fatores importantes não são abordados na simulação, por exemplo, '
+  'a venda de um imovel pode incorrer em despesa consideravel em taxas de corretagem ou pode ser preciso oferecer um desconto significativo pela falta '
+  'de liquidez.\n\n'
+  'Nos gráficos a seguir, os valores de patrimônio e fluxo de caixa são relativos ao preço do imovel no presente. Ou seja, o valor 0.5 '
+  'no gráfico significa 0.5 * valor do imóvel.\n\n'
+  'Você pode controlar os parâmetros da simulação na barra lateral. ')
 st.text('Series no gráfico:')
 
 st.sidebar.header('Opções da simulação')
