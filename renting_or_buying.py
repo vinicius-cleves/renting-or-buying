@@ -1,7 +1,3 @@
-
-import matplotlib.pyplot as plt
-plt.style.use('seaborn')
-
 import numpy as np
 
 class SistemaDeAmortizacao:

@@ -1,9 +1,8 @@
-from matplotlib.pyplot import plot
 import pandas as pd
-from renting_or_buying import SAC, Aluguel, Financiamento
-import streamlit as st
 import plotly.express as px
+import streamlit as st
 
+from renting_or_buying import SAC, Aluguel, Financiamento
 
 st.title('Comprar ou alugar?')
 st.caption('Isso não é aconselhamento financeiro!')
