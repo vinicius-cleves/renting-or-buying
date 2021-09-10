@@ -1,0 +1,155 @@
+### >>> Compra financiada
+
+Calculo dos pagamentos:
+
+$$ 
+P_0 = - \alpha V
+$$
+
+
+$$ 
+P_i = -\left( \frac{V_f}{n} + \left(V_f - \frac{V_f}{n}(i-1)\right)t_j \right), \qquad i > 0 
+$$
+
+$$ 
+V_f = (1-\alpha) V 
+$$
+
+- $P_i$ é o pagamento $i$ 
+- $V_f$ é o valor financiado
+- $V$ é o valor do imovel
+- $\alpha$ é a proporção paga na entrada
+- $n$ é o número de parcelas
+- $t_j$ é a taxa de juros do financiamento
+
+O valor presente dos pagamento $i$ é:
+$$ 
+\operatorname{VP}[P_i] = \frac{P_i}{(1+t_{r})^i} 
+$$
+
+- $t_r$ é a taxa de juros livre de risco 
+
+Portando o valor presente de todos os pagamentos é:
+
+$$ 
+\operatorname{VP}[Pagamentos] = \sum_{i=0}^{n} \frac{P_i}{(1+t_{r})^i} 
+$$
+
+
+Quanto ao imovel o seu valor futuro é:
+
+$$
+\operatorname{VF}[Imovel] = V(1+t_i)^n 
+$$
+
+- $t_i$ é a taxa de retorno do mercado imobiliario
+
+Logo o seu valor presente é:
+
+$$
+\operatorname{VP}[Imovel] = \frac{V(1+t_i)^n}{(1+t_r)^n} 
+$$
+
+
+O valor presente do investimento considerando a compra financiada é, então:
+
+$$ 
+\operatorname{VP}[Total] = \operatorname{VP}[Pagamentos] + \operatorname{VP}[Imovel] 
+$$
+
+
+
+Em um determinado momento do tempo $k$, o valor presente do patrimonio corresponde ao valor presente do pagamentos realizados até $k$ mais a proporção do imovel quitada até o momento $k$:
+
+$$ 
+\operatorname{VP}[Total]_k = \sum_{i=0}^{k} \frac{P_i}{(1+t_{r})^i} + V \frac{(1+t_i)^k}{(1+t_r)^k}\left(\alpha + \frac{k}{n} (1-\alpha)\right)  
+$$ 
+
+Podemos definir a parcela como referente ao valor do imovel. Assim:
+
+$$ 
+P_i = V p_i 
+$$
+$$
+ p_i = \frac{P_i}{V}
+$$
+$$
+ p_0 = - \alpha 
+$$
+$$
+ p_i = - \frac{ \frac{V_f}{n} + \left(V_f - \frac{V_f}{n}(i-1)\right)t_j }{V} = - \frac{V_f}{V} \left( \frac{1}{n} + \left(1 - \frac{1}{n}(i-1)\right)t_j \right), \qquad i > 0 
+$$
+$$
+ p_i = - (1-\alpha) \left( \frac{1}{n} + \left(1 - \frac{1}{n}(i-1)\right)t_j \right), \qquad i > 0
+$$
+
+
+
+Substituido $P_i$ por $p_i$ na equação do valor presente do patrimonio no mês $k$:
+
+$$
+ \operatorname{VP}[Total]_k = \sum_{i=0}^{k} \frac{V p_i}{(1+t_{r})^i} + V \frac{(1+t_i)^k}{(1+t_r)^k}\left(\alpha + \frac{k}{n} (1-\alpha)\right)  
+$$
+
+O que evidencia que o valor presente é um multiplo de $V$. Então podemos melhor calcular esse multiplo:
+ $$ \frac{\operatorname{VP}[Total]_k}{V} = \sum_{i=0}^{k} \frac{p_i}{(1+t_{r})^i} +  \frac{(1+t_i)^k}{(1+t_r)^k}\left(\alpha + \frac{k}{n} (1-\alpha)\right)  
+$$
+
+### >>> Aluguel
+
+O valor do investimento mensal que vamos considerar é o que sobrar do aluguel em relação aos pagamentos no financiamento.
+Note que, em algum momento, o custo do aluguel fica maior que o pagamento no financiamento. Nesse caso, vamos considerar que não são mais feitos aportes e o pagamento é o valor do aluguel.
+
+$$
+ P_i^{aluguel} = min(P_i, - c_a V (1+t_i)^i)
+ $$ 
+
+
+$$
+I_i = - P_i^{aluguel} - c_a V (1+t_i)^i
+$$
+
+- $c_a$ é o custo do aluguel mensal reference ao valor do imóvel
+
+
+
+O valor futuro do investimento vai ser:
+$$
+ \operatorname{VF}[I_i] = I_i (1+t_{m})^{n-i}
+ $$
+
+- $ t_m $ é o rendimento do dinheiro aplicado  
+
+Logo o valor presente do investimento é:
+
+$$
+ \operatorname{VP}[I_i] = \frac{I_i (1+t_{m})^{n-i}}{(1+t_r)^n}  
+ $$
+
+$$
+ \operatorname{VP}[Investimentos] = \sum_{i=0}^{n} \frac{I_i (1+t_{m})^{n-i}}{(1+t_r)^n}  
+ $$
+
+O valor presente dos pagamentos continua o mesmo da compra financiada, ou seja:
+
+$$
+ \operatorname{VP}[Pagamentos] = \sum_{i=0}^{n} \frac{P_i^{aluguel}}{(1+t_{r})^i} 
+ $$
+
+
+Assim, nessa categoria, o valor presente total é:
+
+$$
+ \operatorname{VP}[Total] =  \operatorname{VP}[Pagamentos] + \operatorname{VP}[Investimentos] 
+ $$ 
+
+
+
+Em um determinado momento do tempo, o valor presente do patrimonio é:
+
+$$
+ \operatorname{VP}[Total]_k =  \sum_{i=0}^{k} \frac{P_i}{(1+t_{r})^i}  + \sum_{i=0}^{k} \frac{I_i (1+t_{m})^{k-i}}{(1+t_r)^k}  
+ $$ 
+
+
+Aqui também é possivel mostrar que o valor presente do patrimonio no mês $k$ é proporcional a V. Essa tarefa eu deixo a cargo do leitor 
