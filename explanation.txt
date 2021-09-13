@@ -116,32 +116,32 @@ $$
 O valor futuro do investimento vai ser:
 $$
  \operatorname{VF}[I_i] = I_i (1+t_{m})^{n-i}
- $$
+$$
 
-- $ t_m $ é o rendimento do dinheiro aplicado  
+- $t_m$ é o rendimento do dinheiro aplicado  
 
 Logo o valor presente do investimento é:
 
 $$
  \operatorname{VP}[I_i] = \frac{I_i (1+t_{m})^{n-i}}{(1+t_r)^n}  
- $$
+$$
 
 $$
  \operatorname{VP}[Investimentos] = \sum_{i=0}^{n} \frac{I_i (1+t_{m})^{n-i}}{(1+t_r)^n}  
- $$
+$$
 
 O valor presente dos pagamentos continua o mesmo da compra financiada, ou seja:
 
 $$
  \operatorname{VP}[Pagamentos] = \sum_{i=0}^{n} \frac{P_i^{aluguel}}{(1+t_{r})^i} 
- $$
+$$
 
 
 Assim, nessa categoria, o valor presente total é:
 
 $$
  \operatorname{VP}[Total] =  \operatorname{VP}[Pagamentos] + \operatorname{VP}[Investimentos] 
- $$ 
+$$ 
 
 
 
@@ -149,7 +149,7 @@ Em um determinado momento do tempo, o valor presente do patrimonio é:
 
 $$
  \operatorname{VP}[Total]_k =  \sum_{i=0}^{k} \frac{P_i}{(1+t_{r})^i}  + \sum_{i=0}^{k} \frac{I_i (1+t_{m})^{k-i}}{(1+t_r)^k}  
- $$ 
+$$ 
 
 
-Aqui também é possivel mostrar que o valor presente do patrimonio no mês $k$ é proporcional a V. Essa tarefa eu deixo a cargo do leitor 
+Aqui também é possivel mostrar que o valor presente do patrimonio no mês $k$ é proporcional a V. Essa tarefa eu deixo a cargo do leitor.
