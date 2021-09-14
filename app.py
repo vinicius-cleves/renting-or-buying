@@ -8,10 +8,10 @@ st.title('Comprar ou alugar?')
 st.caption('Isso não é aconselhamento financeiro!')
 st.markdown('''
 É melhor comprar ou alugar um imóvel. A simulação a seguir busca responder essa pergunta
-considerando um conjunto de variaveis, como taxa de juros, valorização do imóvel, tempo 
+considerando um conjunto de variáveis, como taxa de juros, valorização do imóvel, tempo 
 de financiamento, etc.
 
-Consideramos dois cenários. No primeiro, a casa é comprada com um financiamento imobiliario, 
+Consideramos dois cenários. No primeiro, a casa é comprada com um financiamento imobiliário, 
 chamamos esse de Financiamento. No segundo, em vez de comprar a casa, alugamos um imóvel e 
 investimos a diferença do valor pago no primeiro cenario com o valor do aluguel. 
 A esse segundo cenário, damos o nome de Aluguel.  
@@ -19,15 +19,15 @@ A esse segundo cenário, damos o nome de Aluguel.
 Ao final do periodo do financiamento no primeiro cenário temos o imóvel, ao passo que no segundo 
 cenário temos investimentos. 
 
-É importante notar que, fatores importantes não são abordados na simulação, por exemplo, 
+É importante notar que fatores importantes não são abordados na simulação, por exemplo, 
 a venda de um imovel pode incorrer em despesa consideravel em taxas de corretagem ou pode 
 ser preciso oferecer um desconto significativo pela falta de liquidez.
 
-Nos gráficos a seguir, os valores de patrimônio e fluxo de caixa são relativos ao preço do imovel no presente. Ou seja, o valor 0.5 
-no gráfico significa 0.5 * valor do imóvel.
+Nos gráficos a seguir, os valores de patrimônio e fluxo de caixa são relativos ao preço do imovel 
+no presente. Ou seja, o valor 0.5 no gráfico significa 0.5 * valor do imóvel.
 
 Você pode controlar os parâmetros da simulação na barra lateral. ''')
-st.text('Series no gráfico:')
+st.text('Séries no gráfico:')
 
 st.sidebar.header('Opções da simulação')
 V = 1
@@ -147,5 +147,6 @@ fig2.update_layout(
 st.plotly_chart(fig2)
 
 st.header('Matemática')
-with open('explanation.txt') as f:
-  st.markdown(f.read())
+
+with open('explanation.txt') as file:
+  st.markdown(file.read())
